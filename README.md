@@ -166,15 +166,13 @@ This means:
 
 ---
 
-## Extra Work Done Beyond Class Example
+## Output Achieved:
 
-Compared to the class example, this lab includes:
-
-* Reddit data instead of book text
+* cleaned word frequency output after removing common stopwords
 * CSV preprocessing before text analysis
-* bigram generation in addition to word count
-* stopword filtering
-* handling of large external data through Google Drive
+* repeated two-word phrase frequency through bigram counting
+* structured text output in tuple format
+* reproducible processing using a sample file while preserving full-data results
 
 ---
 
