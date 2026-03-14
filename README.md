@@ -91,14 +91,16 @@ Contains repeated two-word phrase counts.
 
 ## Important Dataset Note
 
-The output files included in this repository were generated using the full Reddit text dataset (`reddit_text.txt`), which is available in the Google Drive link above.
+The output files included in this repository were generated using the full Reddit text dataset (`reddit_text.txt`).
+
+Full dataset (170 MB extracted Reddit text): [Google Drive Link](https://drive.google.com/drive/folders/1AF6PVfsACeUZqalvd9n3aGbmzoNhwGZ3?usp=sharing)
 
 The code is configured to use the sample file so that the repository remains lightweight and reproducible.
 
 This means:
 
-* outputs represent processing performed on the full dataset
-* sample file is included only so the code can run directly from GitHub
+- outputs represent processing performed on the full dataset  
+- sample file is included only so the code can run directly from GitHub
 
 ---
 
