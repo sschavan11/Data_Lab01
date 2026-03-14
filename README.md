@@ -1,4 +1,66 @@
-## Text Processing Pipeline
+# Apache Beam Lab – Word Count and Bigram Analysis Using Reddit Dataset
+
+## Objective
+
+The objective of this lab is to implement an Apache Beam-style text processing workflow on Reddit comment data by extracting words, removing stopwords, counting word frequency, and generating bigram frequency outputs using Python on a large real-world dataset.
+
+---
+
+## Dataset Used
+
+The dataset used for this lab is Reddit comment data extracted from a Reddit CSV file.
+
+* Source file: `kaggle_RC_2019-05.csv`
+* Extracted full text size: approximately **170 MB**
+* Data used: Reddit comments from the `body` column
+
+The CSV file was first processed to extract only the comment text, which generated:
+
+* `reddit_text.txt`
+
+Since the full extracted text file is too large for GitHub, it is stored externally.
+
+Full dataset (170 MB): [Google Drive Link](https://drive.google.com/drive/folders/1AF6PVfsACeUZqalvd9n3aGbmzoNhwGZ3?usp=sharing)
+
+A smaller file is included in the repository:
+
+* `reddit_text_sample.txt`
+
+The sample file is included so the code can run directly from GitHub.
+
+---
+
+## Lab Workflow
+
+### 1. Extract Text from CSV
+
+The original CSV contains multiple columns. Only the `body` column was extracted into plain text format.
+
+Script used:
+
+* `extract_body.py`
+
+### 2. Create Sample File
+
+A smaller sample file was created from the full text file for repository use.
+
+Script used:
+
+* `create_sample.py`
+
+This generated:
+
+* `reddit_text_sample.txt`
+
+### 3. Text Processing Pipeline
+
+The main script reads the sample Reddit text file and processes it step by step.
+
+The input file is loaded from:
+
+```python
+input_file = os.path.join("Data", "reddit_text_sample.txt")
+```
 
 The output files are stored inside:
 
@@ -91,28 +153,28 @@ Contains repeated two-word phrase counts.
 
 ## Important Dataset Note
 
-The output files included in this repository were generated using the full Reddit text dataset (`reddit_text.txt`).
+The output files in this repository were generated using the full Reddit text dataset (`reddit_text.txt`).
 
-Full dataset (170 MB extracted Reddit text): [Google Drive Link](https://drive.google.com/drive/folders/1AF6PVfsACeUZqalvd9n3aGbmzoNhwGZ3?usp=sharing)
+The full extracted file is available through the Google Drive link above.
 
-The code is configured to use the sample file so that the repository remains lightweight and reproducible.
+The code is set to use the sample file so the repository remains lightweight and easy to run.
 
 This means:
 
-- outputs represent processing performed on the full dataset  
-- sample file is included only so the code can run directly from GitHub
+* the outputs come from the full dataset
+* the sample file is included for reference and execution
 
 ---
 
 ## Extra Work Done Beyond Class Example
 
-Compared to the class example, this lab additionally includes:
+Compared to the class example, this lab includes:
 
-* use of Reddit social media data instead of book text
+* Reddit data instead of book text
 * CSV preprocessing before text analysis
 * bigram generation in addition to word count
 * stopword filtering
-* handling of large external dataset through Google Drive
+* handling of large external data through Google Drive
 
 ---
 
